@@ -1,0 +1,22 @@
+
+body
+{
+	background: #000000;
+	font-size: 16px;
+}
+
+.item_logo
+{
+	width: 150px;
+	height: 150px;
+	left:50%;
+	margin-top: -125px;
+	margin-left: -125px;
+	position: absolute;
+	top:50%;
+}
+
+#content .item_logo img
+{
+	width: 150px;
+}
