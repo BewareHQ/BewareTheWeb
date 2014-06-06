@@ -7,16 +7,16 @@ body
 
 .item_logo
 {
-	width: 200px;
-	height: 200px;
+	width: 120px;
+	height: 120px;
 	left:50%;
-	margin-top: -100px;
-	margin-left: -100px;
+	margin-top: -60px;
+	margin-left: -60px;
 	position: absolute;
 	top:50%;
 }
 
 #content .item_logo img
 {
-	width: 200px;
+	width: 120px;
 }
