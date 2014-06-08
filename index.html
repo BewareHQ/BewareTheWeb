@@ -2,18 +2,72 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<meta name"description" content="Official website of Beware Entertainment" />
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 	<title>Beware Entertainment</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="Official website of Beware Entertainment">
+	<meta name="author" content="Beware Entertainment">
+	<meta name="keywords" content="beware, entertainment, stratega, games, mobile, ios, android">
+	<meta name='robots' content='index,follow'>
+	<meta name='googlebots' content='index,follow'>
 	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600'>
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/styles.css" />
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.smooth.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#landing").css("height",$(window).height());
+			$('a[href^="#"]').on('click',function(e){
+			    e.preventDefault();
+
+			    var target = this.hash,
+			    $target = $(target);
+			    
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top - 100
+			    }, 1500, 'swing', function () {
+			        window.location.hash = target;
+			    });
+			});
+		});
+	</script>
 </head>
 <body>
-	<section id="content">
-			<figure class="item_logo">
+	<header id="header">
+		<div class="container">
+			<div id="logo">
 				<img src="img/logo.png" />
-			</figure>
+			</div>
+			<ul id="menu">
+				<a href="http://stratega.bewarehq.com"><li>STRATEGA</li></a>
+				<a href="#content"><li id="about">ABOUT</li></a>
+				<a href="http://bewarehq.com:4567"><li>COMMUNITY</li></a>
+				<a href="http://bewarehq.com:4567/category/14/support"><li>SUPPORT</li></a>
+			</ul>
+			<ul id="social">
+				<a href="http://facebook.com/BewareHQ"><li><div id="facebook"></div></li></a>
+				<a href="http://twitter.com/BewareHQ"><li><div id="twitter"></div></li></a>
+				<a href="http://vimeo.com/BewareHQ"><li><div id="vimeo"></div></li></a>
+				<a href="https://www.youtube.com/channel/UCBr-aLZYIgRxvu2mNsrUnYw"><li><div id="youtube"></div></li></a>
+			</ul>
+		</div>
+	</header>
+	<section id="landing">
+		<div class="container">
+			<div class="welcome">
+				<span class="big">BEWARE ENTERTAINMENT</span><br>
+				<span class="tiny">head quarters</span>
+			</div>
+		</div>
 	</section>
+	<section id="content" >
+		<div class="container">
+			<span class="big">ABOUT US</span><br>
+			<span class="tiny">We are a team dedicated to develop games that improves your entertainment</span>
+		</div>
+	</section>
+	<footer id="footer">
+	</footer>
 </body>
 </html>
