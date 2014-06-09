@@ -1,9 +1,17 @@
 @media (min-width: 768px){
+	body
+	{	
+		font-size: 12px;
+	}
 	.container{
 		width: 750px;
 	}
 }
 @media (min-width: 992px){
+	body
+	{	
+		font-size: 14px;
+	}
 	.container{
 		width: 970px;
 	}
@@ -31,6 +39,13 @@ body
 	background: #000000;
 	font-size: 16px;
 	font-family: 'Titillium Web', sans-serif;
+}
+
+h1{
+	font-size: 3.5rem;
+	font-weight: bold;
+	color:#ffffff;
+	margin:0;
 }
 
 header{
@@ -73,8 +88,13 @@ header #logo img{
 }
 
 footer{
+	background: url('../img/bg4x.png') repeat;
 	display: block;
-	height:600px;
+	padding-top:40px;
+	height:100px;
+	color:#fff;
+	font-size: 1rem;
+	text-align: center;
 }
 
 #logo{
@@ -99,6 +119,18 @@ footer{
 	font-size: 1rem;
 	color:#fff;
 	float:right;
+}
+
+#banner{
+	background: url('../img/bg.png') repeat;
+	width: 100%;
+	padding:20px;
+	position: relative;
+}
+
+#banner img{
+	width: 100%;
+	display: block;
 }
 
 #facebook{
@@ -178,14 +210,29 @@ footer{
 }
 
 #content{
-	height:300px;
+	background: url('../img/bg.png') repeat;
 	width:100%;
-	background-color:#1A3E64;
+	background-color:#850000;
 	display: block;
 	color:rgba(255,255,255,0.9);
 	text-align: center;
-	padding-top:150px;
+	padding-top:100px;
 	padding-bottom:100px;
+}
+
+#partners{
+	width:100%;
+	display: block;
+	text-align: center;
+	padding-top:50px;
+	padding-bottom:50px;
+	background-color: #fff;
+	color:#000;
+}
+
+#partners h1{
+	color:#000;
+	font-size: 3rem;
 }
 
 .welcome{
@@ -200,6 +247,20 @@ footer{
 	
 }
 
+.getit{
+	font-size: 1rem;
+	font-weight: bold;
+	position:absolute;
+	display: block;
+	width:300px;
+	left:0;
+	right:0;
+	margin:0 auto;
+	text-align: center;
+	bottom:2rem;
+	color:rgba(255,255,255,0.5);
+}
+
 .big{
 	font-size: 3.5rem;
 	font-weight: bold;
@@ -208,4 +269,13 @@ footer{
 .tiny{
 	font-size: 2rem;
 	color:#cccccc;
+}
+
+#powerup img{
+	width:17rem;
+	margin-bottom: 25px;
+}
+
+#armorgames img{
+	width:22rem;
 }

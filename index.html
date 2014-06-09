@@ -18,6 +18,9 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#landing").css("height",$(window).height());
+			$( window ).resize(function() {
+			  	$("#landing").css("height",$(window).height());
+			});
 			$('a[href^="#"]').on('click',function(e){
 			    e.preventDefault();
 
@@ -61,13 +64,41 @@
 			</div>
 		</div>
 	</section>
+	<!--<section id="banner">
+		<a href="http://stratega.bewarehq.com/">
+			<div class="container">
+				<img src="img/stratega.png" />
+			</div>
+			<div class="getit">
+				COMING SOON, JUNE 24<br>
+				iPhone, iPad & Android
+			</div>
+		</a>
+	</section>-->
 	<section id="content" >
 		<div class="container">
-			<span class="big">ABOUT US</span><br>
+			<h1>ABOUT US</h1><br>
 			<span class="tiny">We are an independent team dedicated to develop games that improves your entertainment</span>
 		</div>
 	</section>
+	<section id="partners">
+		<div class="container">
+			<h1>PARTNERS & SPONSORS</h1><br>
+			<div id = "powerup">
+				<a href="http://powerupmusic.com">
+					<img src="img/powerup.png" />
+				</a>
+			</div>
+			<div id = "armorgames">
+				<a href="http://armorgames.com">
+					<img src="img/armorgames.png" />
+				</a>
+			</div>
+		</div>
+	</section>
 	<footer id="footer">
+		Copyright © 2014 Beware Entertainment<br>
+		made in Paraguay
 	</footer>
 </body>
 </html>
