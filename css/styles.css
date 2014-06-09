@@ -91,7 +91,7 @@ footer{
 }
 
 #menu li:hover{
-	background-color: #2b2b2b;
+	background-color: #181818;
 }
 
 #social{
@@ -169,7 +169,7 @@ footer{
 }
 
 #landing{
-	background: url('../img/bg4x.png') repeat;
+	background: url('../img/bg6.png') repeat;
 	width:100%;
 	background-color:white;
 	position: relative;
@@ -180,7 +180,7 @@ footer{
 #content{
 	height:300px;
 	width:100%;
-	background-color:#1449A4;
+	background-color:#1A3E64;
 	display: block;
 	color:rgba(255,255,255,0.9);
 	text-align: center;
@@ -191,10 +191,11 @@ footer{
 .welcome{
 	color:#fff;
 	position:absolute;
-	top:40%;
+	top:50%;
 	left:50%;
 	width:800px;
 	margin-left: -400px;
+	margin-top:-25px;
 	text-align: center;
 	
 }
