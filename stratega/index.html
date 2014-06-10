@@ -11,22 +11,22 @@
 	<meta name='googlebots' content='index,follow'>
 	<link rel="shortcut icon" href="../img/favicon.ico" />
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600'>
-	<link rel="stylesheet" href="../css/normalize.css" />
-	<link rel="stylesheet" href="../css/styles.css" />
-	<script src="../js/jquery-1.11.0.min.js"></script>
-	<script src="../js/jquery.flexslider.js"></script>
-	<script src="../js/jquery.smooth.js"></script>
+	<link rel="stylesheet" href="http://bewarehq.com/css/normalize.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://bewarehq.com/js/jquery.flexslider.js"></script>
+	<script src="http://bewarehq.com/js/jquery.smooth.js"></script>
 	<script type="text/javascript">
 	function scrollBanner(config) {
 
 		scrollPos = $(this).scrollTop();
 		/*
-		config.banner.css({
+		config.elem.css({
 			'margin-top' : -(scrollPos/3) + "px",
 			'opacity' : 1-(scrollPos/300)
 		});
 		*/
-		config.banner.css({
+		config.bg.css({
 			'background-position': 'center ' + (scrollPos/4) + "px"
 		});
 
@@ -35,9 +35,8 @@
 			$(window).scroll(function() {
 
 				scrollBanner({
-					banner: $('.strategaLand')
+					bg: $('.strategaLand')
 				});
-
 			});
 
 			$("#landing").css("height",$(window).height());
@@ -96,9 +95,9 @@
 				<span class="tiny">coming soon on</span>
 				<div class="mobile">
 					<ul>
-						<li><img src="../img/icons/appstore.png" /></li>
-						<li><img src="../img/icons/amazon.png" /></li>
-						<li><img src="../img/icons/samsungapps.png" /></li>
+						<li><img src="img/icons/appstore.png" /></li>
+						<li><img src="img/icons/amazon.png" /></li>
+						<li><img src="img/icons/samsungapps.png" /></li>
 					</ul>
 				</div>
 			</div>
@@ -109,10 +108,10 @@
 			<h1>PREPARE FOR A FAST PACED RTS-TD</h1>
 			<div class="slider">
                 <ul class="slides">
-                	<li><img src="../img/stratega/shot01.png" /></li>
-                	<li><img src="../img/stratega/shot02.png" /></li>
-                	<li><img src="../img/stratega/shot03.png" /></li>
-                	<li><img src="../img/stratega/shot04.png" /></li>
+                	<li><img src="img/shot01.png" /></li>
+                	<li><img src="img/shot02.png" /></li>
+                	<li><img src="img/shot03.png" /></li>
+                	<li><img src="img/shot04.png" /></li>
                 </ul>
             </div>
 		</div>
