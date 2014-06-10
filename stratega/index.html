@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Stratega by Beware Entertainment</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="Official website of Stratega">
+	<meta name="author" content="Beware Entertainment">
+	<meta name="keywords" content="beware, entertainment, stratega, games, mobile, ios, android">
+	<meta name='robots' content='index,follow'>
+	<meta name='googlebots' content='index,follow'>
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600'>
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/styles.css" />
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/jquery.flexslider.js"></script>
+	<script src="../js/jquery.smooth.js"></script>
+	<script type="text/javascript">
+	function scrollBanner(config) {
+
+		scrollPos = $(this).scrollTop();
+		/*
+		config.banner.css({
+			'margin-top' : -(scrollPos/3) + "px",
+			'opacity' : 1-(scrollPos/300)
+		});
+		*/
+		config.banner.css({
+			'background-position': 'center ' + (scrollPos/4) + "px"
+		});
+
+	}
+		$(document).ready(function() {
+			$(window).scroll(function() {
+
+				scrollBanner({
+					banner: $('.strategaLand')
+				});
+
+			});
+
+			$("#landing").css("height",$(window).height());
+			$( window ).resize(function() {
+			  	$("#landing").css("height",$(window).height());
+			});
+			$('a[href^="#"]').on('click',function(e){
+			    e.preventDefault();
+
+			    var target = this.hash,
+			    $target = $(target);
+			    
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top - 100
+			    }, 1500, 'swing', function () {
+			        window.location.hash = target;
+			    });
+			});
+
+			// FLEX SLIDER CAROUSEL
+                            $(".slider").flexslider({
+                                animation: "slide",
+                                slideshowSpeed:5000,
+                                animationLoop:true,
+                                slideshow:true,
+                                controlNav:false,
+                                directionNav:false
+                            });
+		});
+	</script>
+</head>
+<body>
+	<header id="header">
+		<div class="container">
+			<div id="logo">
+				<img src="../img/logo.png" />
+			</div>
+			<ul id="menu">
+				<a href="http://stratega.bewarehq.com"><li>STRATEGA</li></a>
+				<a href="#content"><li id="about">ABOUT</li></a>
+				<a href="http://bewarehq.com:4567"><li>COMMUNITY</li></a>
+				<a href="http://bewarehq.com:4567/category/14/support"><li>SUPPORT</li></a>
+			</ul>
+			<ul id="social">
+				<a href="http://facebook.com/BewareHQ"><li><div id="facebook"></div></li></a>
+				<a href="http://twitter.com/BewareHQ"><li><div id="twitter"></div></li></a>
+				<a href="http://vimeo.com/BewareHQ"><li><div id="vimeo"></div></li></a>
+				<a href="https://www.youtube.com/channel/UCBr-aLZYIgRxvu2mNsrUnYw"><li><div id="youtube"></div></li></a>
+			</ul>
+		</div>
+	</header>
+	<section id="landing" class="strategaLand">
+		<div class="container">
+			<div class="game">
+				<iframe src="http://player.vimeo.com/video/95360806" width="720" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<span class="tiny">coming soon on</span>
+				<div class="mobile">
+					<ul>
+						<li><img src="../img/icons/appstore.png" /></li>
+						<li><img src="../img/icons/amazon.png" /></li>
+						<li><img src="../img/icons/samsungapps.png" /></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="content" >
+		<div class="container">
+			<h1>PREPARE FOR A FAST PACED RTS-TD</h1>
+			<div class="slider">
+                <ul class="slides">
+                	<li><img src="../img/stratega/shot01.png" /></li>
+                	<li><img src="../img/stratega/shot02.png" /></li>
+                	<li><img src="../img/stratega/shot03.png" /></li>
+                	<li><img src="../img/stratega/shot04.png" /></li>
+                </ul>
+            </div>
+		</div>
+	</section>
+	<footer id="footer">
+		Copyright © 2014 Beware Entertainment<br>
+		made in Paraguay
+	</footer>
+</body>
+</html>
