@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="http://bewarehq.com/css/normalize.css" />
 	<link rel="stylesheet" href="css/styles.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="http://bewarehq.com/js/jquery.flexslider.js"></script>
+	<script src="js/jquery.slides.min.js"></script>
 	<script src="http://bewarehq.com/js/jquery.smooth.js"></script>
 	<script type="text/javascript">
 	function scrollBanner(config) {
@@ -27,7 +27,7 @@
 		});
 		*/
 		config.bg.css({
-			'background-position': 'center ' + (scrollPos/4) + "px"
+			'background-position': 'center ' + (-scrollPos/24) + "px"
 		});
 
 	}
@@ -35,13 +35,15 @@
 			$(window).scroll(function() {
 
 				scrollBanner({
-					bg: $('.strategaLand')
+					bg: $('.backBG')
 				});
 			});
 
 			$("#landing").css("height",$(window).height());
+			$(".trailer").css("margin-top",$(window).height()/-4);
 			$( window ).resize(function() {
 			  	$("#landing").css("height",$(window).height());
+			  	$(".trailer").css("margin-top",$(window).height()/-4);
 			});
 			$('a[href^="#"]').on('click',function(e){
 			    e.preventDefault();
@@ -56,15 +58,45 @@
 			    });
 			});
 
-			// FLEX SLIDER CAROUSEL
-                            $(".slider").flexslider({
-                                animation: "slide",
-                                slideshowSpeed:5000,
-                                animationLoop:true,
-                                slideshow:true,
-                                controlNav:false,
-                                directionNav:false
-                            });
+			$(function() {
+		      $('#slider').slidesjs({
+		        width: 640,
+		        height:480,
+		         navigation: {
+      				active: false },
+      			pagination: {
+      				active: false },
+      			play: {
+			      active: false,
+			      effect: "slide",
+			      interval: 2000,
+			      auto: true,
+			      swap: true,
+			      pauseOnHover: false,
+			      restartDelay: 2500
+			      }
+		      });
+		    });
+
+		    $(function() {
+		      $('#pics').slidesjs({
+		        width: 272,
+		        height:286,
+		         navigation: {
+      				active: false },
+      			pagination: {
+      				active: false },
+      			play: {
+			      active: false,
+			      effect: "fade",
+			      interval: 2000,
+			      auto: true,
+			      swap: true,
+			      pauseOnHover: false,
+			      restartDelay: 2500
+			      }
+		      });
+		    });
 		});
 	</script>
 </head>
@@ -81,18 +113,25 @@
 				<a href="http://bewarehq.com:4567/category/14/support"><li>SUPPORT</li></a>
 			</ul>
 			<ul id="social">
-				<a href="http://facebook.com/BewareHQ"><li><div id="facebook"></div></li></a>
-				<a href="http://twitter.com/BewareHQ"><li><div id="twitter"></div></li></a>
-				<a href="http://vimeo.com/BewareHQ"><li><div id="vimeo"></div></li></a>
-				<a href="https://www.youtube.com/channel/UCBr-aLZYIgRxvu2mNsrUnYw"><li><div id="youtube"></div></li></a>
+				<a href="http://facebook.com/BewareHQ"><li><div class="socialButtons facebook"></div></li></a>
+				<a href="http://twitter.com/BewareHQ"><li><div class="socialButtons twitter"></div></li></a>
+				<a href="http://vimeo.com/BewareHQ"><li><div class="socialButtons vimeo"></div></li></a>
+				<a href="https://www.youtube.com/channel/UCBr-aLZYIgRxvu2mNsrUnYw"><li><div class="socialButtons youtube"></div></li></a>
 			</ul>
 		</div>
 	</header>
-	<section id="landing" class="strategaLand">
+	<page>
+	<div class="backBG"></div>
+	<section id="landing">
 		<div class="container">
-			<div class="game">
-				<iframe src="http://player.vimeo.com/video/95360806" width="720" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<span class="tiny">coming soon on</span>
+			<div class="trailer">
+				<div class="liner">
+					<div class="logoStratega"><img src="img/logoStratega.png" /></div>
+					<div class="playBt"><img src="img/play.png" /></div>
+				</div>
+				<!-- <iframe src="http://player.vimeo.com/video/95360806" width="720" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+				<div class="clear"></div>
+				<span class="tiny">available on</span>
 				<div class="mobile">
 					<ul>
 						<li><img src="img/icons/appstore.png" /></li>
@@ -103,19 +142,67 @@
 			</div>
 		</div>
 	</section>
-	<section id="content" >
-		<div class="container">
-			<h1>PREPARE FOR A FAST PACED RTS-TD</h1>
-			<div class="slider">
-                <ul class="slides">
-                	<li><img src="img/shot01.jpg" /></li>
-                	<li><img src="img/shot02.jpg" /></li>
-                	<li><img src="img/shot03.jpg" /></li>
-                	<li><img src="img/shot04.jpg" /></li>
-                </ul>
+
+	<section id="content" class="liner0" >
+		<h1>DEFEND. EXPAND. INVADE!</h1>
+		<div class="containerGallery">
+			<div id="slider">
+    				<img src="img/screenshots/shot01.jpg" />
+                	<img src="img/screenshots/shot02.jpg" />
+                	<img src="img/screenshots/shot03.jpg" />
+                	<img src="img/screenshots/shot04.jpg" />
             </div>
 		</div>
+
+		<div class="container divisor">
+			<img src="img/hitechBar.png" />
+		</div>
+
+		<h1>ARE YOU PREPARED FOR STRATEGA?</h1>
+		<div class="container">
+			<div class="info">
+				Experience an unique gameplay in every mission. Build your base and prepare it to survive waves of enemies attacks or prepare your strategy to expand your base to take down the enemy. Manage your resources wisely to upgrade your weapons structures during the game.
+			</div>
+			<div class="enemies"><img src="img/enemies.png" /></div>
+
+</section>
+<section id="contentEnd" class="liner" >
+			<div class="table">
+				<div class="table-cell">
+					<div id="pics">
+		    				<img src="img/uHive.png" />
+		                	<img src="img/uLaser.png" />
+		                	<img src="img/uMissile.png" />
+		                	<img src="img/uPhoton.png" />
+		            </div>
+				</div>
+
+				<div class="table-cell">
+					<div class="info textLeft">
+						- 15 missions 
+						<br>- Survival mode
+						<br>- 9 achievements 
+						<br>- Structures upgrades 
+						<br>- 6 different enemies
+						<br>- Unique gameplay
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<h1>Start the galaxy domination by mastering Stratega now! </h1>
+		<div class="container">
+				<div class="mobile">
+					<ul>
+						<li><img src="img/icons/appstore.png" /></li>
+						<li><img src="img/icons/amazon.png" /></li>
+						<li><img src="img/icons/samsungapps.png" /></li>
+					</ul>
+				</div>
+		</div>
+		<div class="container divisor"></div>
 	</section>
+</page>
 	<footer id="footer">
 		Copyright © 2014 Beware Entertainment<br>
 		made in Paraguay
