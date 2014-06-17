@@ -1,33 +1,3 @@
-@media (min-width: 768px){
-	body
-	{	
-		font-size: 12px;
-	}
-	.container{
-		width: 750px;
-	}
-}
-@media (min-width: 992px){
-	body
-	{	
-		font-size: 14px;
-	}
-	.container{
-		width: 970px;
-	}
-}
-@media (min-width: 1200px){
-	.container{
-		width: 1170px;
-	}
-}
-
-.container{
-	padding-right:15px;
-	padding-left:15px;
-	margin-right:auto;
-	margin-left:auto;
-}
 
 a{
 	text-decoration: none;
@@ -37,19 +7,28 @@ a{
 body
 {
 	background: #000000;
-	font-size: 16px;
 	font-family: 'Titillium Web', sans-serif;
 }
 
+html{
+	font-size: 16px;
+}
+
+
 h1{
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 	color:#ffffff;
 	margin:0;
 }
 
+/*
+	=====================================================================
+	HEADER
+	=====================================================================
+*/
 header{
-	height:100px;
+	height:6.25rem;
 	width: 100%;
 	background:rgba(0,0,0,0.85);
 	position: fixed !important;
@@ -57,36 +36,6 @@ header{
 	right:0;
 	z-index: 1000;
 }
-
-.mobile{
-	margin-top:20px;
-}
-
-.mobile ul{
-	list-style: none;
-	margin:0;
-	padding: 0;
-}
-
-.mobile ul li{
-	display: inline-block;
-	padding-left: 10px;
-	padding-right:10px;
-}
-
-.mobile img{
-	height:3rem;
-}
-
-.slider img{
-	width:720px;
-	border:2px solid #0080BD;
-}
-
-.slider ul{
-	padding:0!important;
-}
-
 
 header ul{
 	list-style: none;
@@ -96,38 +45,24 @@ header ul{
 
 header #menu li{
 	display: inline-block;
-	padding-left:4px;
-	padding-right:4px;
-	padding-top:35px;
-	padding-bottom:35px;
-	width: 100px;
+	padding-left:0.25rem;
+	padding-right:0.25rem;
+	padding-top:2.1875rem;
+	padding-bottom:2.1875rem;
+	width: 6.25rem;
 	text-align: center;
 }
 
 header #social li{
 	display: inline-block;
-	padding-left:4px;
-	padding-right:4px;
-	padding-top:35px;
-	padding-bottom:35px;
+	padding-left:0.25rem;
+	padding-right:0.25rem;
+	padding-top:2.1875rem;
+	padding-bottom:2.1875rem;
 	text-align: center;
 }
 
-header #logo img{
-	height:90px;
-}
-
-footer{
-	background: url('../img/bg4x.png') repeat;
-	display: block;
-	padding-top:40px;
-	height:100px;
-	color:#fff;
-	font-size: 1rem;
-	text-align: center;
-}
-
-
+header #logo img{ height:5.625rem; }
 
 #logo{
 	display: inline-block;
@@ -153,86 +88,35 @@ footer{
 	float:right;
 }
 
-#banner{
-	background: url('../img/bg.png') repeat;
-	width: 100%;
-	padding:20px;
-	position: relative;
-}
-
-
-
-#banner img{
-	width: 100%;
-	display: block;
-}
-
-#facebook{
-	background: url('../img/icons/fboff.png') no-repeat;
-	background-size: 100% auto;
+.socialButtons{
+	background-size: 100% auto !important;
 	display: block;
 	width:30px;
 	height:30px;
 }
+.facebook{ background: url('../img/icons/fboff.png') no-repeat; }
+.facebook:hover{ background: url('../img/icons/fbon.png') no-repeat; }
+.twitter{ background: url('../img/icons/twoff.png') no-repeat; }
+.twitter:hover{ background: url('../img/icons/twon.png') no-repeat; }
+.youtube{ background: url('../img/icons/ytoff.png') no-repeat; }
+.youtube:hover{ background: url('../img/icons/yton.png') no-repeat; }
+.vimeo{ background: url('../img/icons/vioff.png') no-repeat; }
+.vimeo:hover{ background: url('../img/icons/vion.png') no-repeat; }
 
-#facebook:hover{
-	background: url('../img/icons/fbon.png') no-repeat;
-	background-size: 100% auto;
-	display: block;
-	width:30px;
-	height:30px;
+/*
+	=====================================================================
+	GENERAL
+	=====================================================================
+*/
+
+.container{
+	padding-right:1rem;
+	padding-left:1rem;
+	margin-right:auto;
+	margin-left:auto;
 }
 
 
-#twitter{
-	background: url('../img/icons/twoff.png') no-repeat;
-	background-size: 100% auto;
-	display: block;
-	width:30px;
-	height:30px;
-}
-
-#twitter:hover{
-	background: url('../img/icons/twon.png') no-repeat;
-	background-size: 100% auto;
-	display: block;
-	width:30px;
-	height:30px;
-}
-
-
-#youtube{
-	background: url('../img/icons/ytoff.png') no-repeat;
-	background-size: 100% auto;
-	display: block;
-	width:30px;
-	height:30px;
-}
-
-#youtube:hover{
-	background: url('../img/icons/yton.png') no-repeat;
-	background-size: 100% auto;
-	display: block;
-	width:30px;
-	height:30px;
-}
-
-
-#vimeo{
-	background: url('../img/icons/vioff.png') no-repeat;
-	background-size: 100% auto;
-	display: block;
-	width:30px;
-	height:30px;
-}
-
-#vimeo:hover{
-	background: url('../img/icons/vion.png') no-repeat;
-	background-size: 100% auto;
-	display: block;
-	width:30px;
-	height:30px;
-}
 
 #landing{
 	width:100%;
@@ -284,32 +168,6 @@ footer{
 	
 }
 
-.game{
-	color:#fff;
-	position:absolute;
-	top:50%;
-	left:50%;
-	width:800px;
-	margin-left: -400px;
-	margin-top:-300px;
-	text-align: center;
-	
-}
-
-.getit{
-	font-size: 1rem;
-	font-weight: bold;
-	position:absolute;
-	display: block;
-	width:300px;
-	left:0;
-	right:0;
-	margin:0 auto;
-	text-align: center;
-	bottom:2rem;
-	color:rgba(255,255,255,0.5);
-}
-
 .big{
 	font-size: 3.5rem;
 	font-weight: bold;
@@ -327,4 +185,48 @@ footer{
 
 #armorgames img{
 	width:22rem;
+}
+
+/*
+	=====================================================================
+	FOOTER
+	=====================================================================
+*/
+footer{
+	background: url('../img/bg4x.png') repeat;
+	display: block;
+	padding-top:40px;
+	height:100px;
+	color:#fff;
+	font-size: 1rem;
+	text-align: center;
+}
+
+@media (min-width:320px){
+	html{ font-size: 8px; }
+	.container{width: 280px;}
+	#social{display: none;}
+	.welcome{width: 280px;margin-left: -140px;}
+}
+@media (min-width:480px){
+	html{ font-size: 12px; }
+	.container{width: 420px;}
+	.welcome{width: 400px;margin-left: -200px;}
+}
+@media (min-width:640px){
+	html{ font-size: 13px; }
+	#social{display: inline-block;}
+	.container{width: 590px;}
+	.welcome{width: 550px;margin-left: -275px;}
+}
+@media (min-width:768px){
+	html{ font-size: 14px; }
+	#social{display: inline-block;}
+	.container{width: 720px;}
+	.welcome{width: 700px;margin-left: -350px;}
+}
+@media (min-width:992px){
+	html{ font-size: 15px; }
+	.container{width: 960px;}
+	.welcome{width: 800px;margin-left: -400px;}
 }
