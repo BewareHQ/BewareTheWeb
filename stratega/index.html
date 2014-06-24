@@ -39,12 +39,14 @@
 					bg: $('.backBG')
 				});
 			});
-
+			$("#btPlayTrailer").click(function(e){
+				$("#btPlayTrailer").html('<iframe width="'+(($("#btPlayTrailer").height()*1.2)*1.7)+'" height="'+($("#btPlayTrailer").height()*1.2)+'" src="http://www.youtube.com/embed/v7cA4CYDGDY?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>');
+			});
 			$("#landing").css("height",$(window).height());
-			$(".trailer").css("margin-top",$(window).height()/-4);
+			$(".trailer").css("margin-top",$(window).height()/-3.2);
 			$( window ).resize(function() {
 			  	$("#landing").css("height",$(window).height());
-			  	$(".trailer").css("margin-top",$(window).height()/-4);
+			  	$(".trailer").css("margin-top",$(window).height()/-3.2);
 			});
 			$('a[href^="#"]').on('click',function(e){
 			    e.preventDefault();
@@ -136,11 +138,11 @@
 	<section id="landing">
 		<div class="container">
 			<div class="trailer">
-				<div class="liner">
+				<a href="#"><div id="btPlayTrailer" class="liner">
 					<div class="logoStratega"><img src="img/logoStratega.png" /></div>
 					<div class="playBt"><img src="img/play.png" /></div>
-				</div>
-				<!-- <iframe src="http://player.vimeo.com/video/95360806" width="720" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+				</div></a>
+				
 				<div class="clear"></div>
 				<span class="tiny">available on</span>
 				<div class="mobile">
@@ -150,8 +152,13 @@
 						<li><img src="img/icons/samsungapps.png" /></li>
 					</ul>
 				</div>
+
 			</div>
+
 		</div>
+		<div id="soundtrackContainer">
+					<a href="http://powerupmusic.bandcamp.com/album/stratega"><div id="soundtrack"><img src="img/music.png" /><br>GET THE SOUNDTRACK
+				</div>
 	</section>
 
 	<section id="content" class="liner0" >
@@ -209,6 +216,8 @@
 						<li><img src="img/icons/amazon.png" /></li>
 						<li><img src="img/icons/samsungapps.png" /></li>
 					</ul>
+					<div class="container divisor"></div>
+					<a href="http://powerupmusic.bandcamp.com/album/stratega"><div id="soundtrack"><img src="img/music.png" /><br>GET THE SOUNDTRACK</div></a>
 				</div>
 		</div>
 		<div class="container divisor"></div>
