@@ -103,14 +103,26 @@
 		});
 	</script>
 	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-52001418-1', 'bewarehq.com');
-	  ga('send', 'pageview');
+		ga('create', 'UA-52001418-1', 'bewarehq.com');
+		ga('send', 'pageview');
 
+		/**
+		* Function that tracks a click on an outbound link in Google Analytics.
+		* This function takes a valid URL string as an argument, and uses that URL string
+		* as the event label.
+		*/
+		var trackOutboundLink = function(url) {
+		   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+		     function () {
+		     document.location = url;
+		     }
+		   });
+		}
 	</script>
 </head>
 <body>
@@ -120,16 +132,16 @@
 				<img src="../img/logo.png" />
 			</div>
 			<ul id="menu">
-				<a href="http://stratega.bewarehq.com"><li>STRATEGA</li></a>
-				<a href="http://bewarehq.com/index.html#content"><li id="about">ABOUT</li></a>
-				<a href="http://bewarehq.com:4567"><li>COMMUNITY</li></a>
-				<a href="http://bewarehq.com:4567/category/14/support"><li>SUPPORT</li></a>
+				<a href="http://stratega.bewarehq.com" onclick="trackOutboundLink('http://stratega.bewarehq.com'); return false;"><li>STRATEGA</li></a>
+				<a href="http://bewarehq.com/index.html#content" onclick="trackOutboundLink('http://bewarehq.com/index.html'); return false;"><li id="about">ABOUT</li></a>
+				<a href="http://bewarehq.com:4567" onclick="trackOutboundLink('http://bewarehq.com:4567'); return false;"><li>COMMUNITY</li></a>
+				<a href="http://bewarehq.com:4567/category/14/support" onclick="trackOutboundLink('support'); return false;"><li>SUPPORT</li></a>
 			</ul>
 			<ul id="social">
-				<a href="http://facebook.com/BewareHQ"><li><div class="socialButtons facebook"></div></li></a>
-				<a href="http://twitter.com/BewareHQ"><li><div class="socialButtons twitter"></div></li></a>
-				<a href="http://vimeo.com/BewareHQ"><li><div class="socialButtons vimeo"></div></li></a>
-				<a href="https://www.youtube.com/channel/UCBr-aLZYIgRxvu2mNsrUnYw"><li><div class="socialButtons youtube"></div></li></a>
+				<a href="http://facebook.com/BewareHQ" onclick="trackOutboundLink('facebook'); return false;"><li><div class="socialButtons facebook"></div></li></a>
+				<a href="http://twitter.com/BewareHQ" onclick="trackOutboundLink('twitter'); return false;"><li><div class="socialButtons twitter"></div></li></a>
+				<a href="http://vimeo.com/BewareHQ" onclick="trackOutboundLink('vimeo'); return false;"><li><div class="socialButtons vimeo"></div></li></a>
+				<a href="https://www.youtube.com/channel/UCBr-aLZYIgRxvu2mNsrUnYw" onclick="trackOutboundLink('youtube'); return false;"><li><div class="socialButtons youtube"></div></li></a>
 			</ul>
 		</div>
 	</header>
@@ -138,7 +150,7 @@
 	<section id="landing">
 		<div class="container">
 			<div class="trailer">
-				<a href="#"><div id="btPlayTrailer" class="liner">
+				<a href="#" onclick="trackOutboundLink('trailer'); return false;"><div id="btPlayTrailer" class="liner">
 					<div class="logoStratega"><img src="img/logoStratega.png" /></div>
 					<div class="playBt"><img src="img/play.png" /></div>
 				</div></a>
@@ -147,9 +159,9 @@
 				<span class="tiny">available on</span>
 				<div class="mobile">
 					<ul>
-						<a href="https://itunes.apple.com/us/app/stratega-rts/id884870397?mt=8"><li><img src="img/icons/appstore.png" /></li></a>
-						<a href="http://www.amazon.com/Beware-Entertainment-Stratega/dp/B00LA7PHH8"><li><img src="img/icons/amazon.png" /></li></a>
-						<a href="http://slideme.org/application/stratega"><li><img src="img/icons/slideme.png"/></li></a>
+						<a href="https://itunes.apple.com/us/app/stratega-rts/id884870397?mt=8" onclick="trackOutboundLink('stratega appstore'); return false;"><li><img src="img/icons/appstore.png" /></li></a>
+						<a href="http://www.amazon.com/Beware-Entertainment-Stratega/dp/B00LA7PHH8" onclick="trackOutboundLink('stratega amazon'); return false;"><li><img src="img/icons/amazon.png" /></li></a>
+						<a href="http://slideme.org/application/stratega" onclick="trackOutboundLink('stratega slideme'); return false;"><li><img src="img/icons/slideme.png"/></li></a>
 					</ul>
 				</div>
 
@@ -157,7 +169,7 @@
 
 		</div>
 		<div id="soundtrackContainer">
-					<a href="http://powerupmusic.bandcamp.com/album/stratega"><div id="soundtrack"><img src="img/music.png" /><br>GET THE SOUNDTRACK
+					<a href="http://powerupmusic.bandcamp.com/album/stratega" onclick="trackOutboundLink('stratega soundtrack'); return false;"><div id="soundtrack"><img src="img/music.png" /><br>GET THE SOUNDTRACK
 				</div></a>
 	</section>
 
@@ -212,12 +224,12 @@
 		<div class="container">
 				<div class="mobile">
 					<ul>
-						<a href="https://itunes.apple.com/us/app/stratega-rts/id884870397?mt=8"><li><img src="img/icons/appstore.png" /></li></a>
-						<a href="http://www.amazon.com/Beware-Entertainment-Stratega/dp/B00LA7PHH8"><li><img src="img/icons/amazon.png" /></li></a>
-						<a href="http://slideme.org/application/stratega"><li><img src="img/icons/slideme.png"/></li></a>
+						<a href="https://itunes.apple.com/us/app/stratega-rts/id884870397?mt=8" onclick="trackOutboundLink('stratega appstore'); return false;"><li><img src="img/icons/appstore.png" /></li></a>
+						<a href="http://www.amazon.com/Beware-Entertainment-Stratega/dp/B00LA7PHH8" onclick="trackOutboundLink('stratega amazon'); return false;"><li><img src="img/icons/amazon.png" /></li></a>
+						<a href="http://slideme.org/application/stratega" onclick="trackOutboundLink('stratega slideme'); return false;"><li><img src="img/icons/slideme.png"/></li></a>
 					</ul>
 					<div class="container divisor"></div>
-					<a href="http://powerupmusic.bandcamp.com/album/stratega"><div id="soundtrack"><img src="img/music.png" /><br>GET THE SOUNDTRACK</div></a>
+					<a href="http://powerupmusic.bandcamp.com/album/stratega" onclick="trackOutboundLink('stratega soundtrack'); return false;"><div id="soundtrack"><img src="img/music.png" /><br>GET THE SOUNDTRACK</div></a>
 				</div>
 		</div>
 		<div class="container divisor"></div>
